@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+
+<project name="mp3" default="compare">
+  <target name="main">
+  	<taskdef name="id3" classname="com.mahen.ant.IRiverCopyTask" classpath="bin"/>
+  	<id3 todir="/home/music/temp">
+  	  <fileset dir="/home/music">
+  	  	<include name="workout.m3u"/>
+  	  </fileset>
+  	</id3>
+  </target>
+  <target name="compare">
+  	<taskdef name="comp" classname="com.mahen.ant.CompareLibraryTask" classpath="bin"/>
+  	<comp output="/home/andy/test2.txt">
+  		<fileset dir="/home/music">
+  		  <include name="**/*"/>
+		  <exclude name="**/*.m3u"/>
+  		</fileset>
+	</comp>
+  </target>
+</project>

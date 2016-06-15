@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+
+<project name="mp3" default="main">
+  <target name="main">
+    <!--
+ 	<taskdef classname="com.mahen.ant.MusicLink" name="mcopy"/>
+    <mcopy todir="/music/tmp" ipod="/music/all.pls" outfilename="/home/andy/lnmusic.sh"> 
+      <fileset dir="/music">
+        <include name="artists/**/*.mp3"/>
+        <include name="singles/**/*.mp3"/>
+      </fileset>
+    </mcopy>
+    -->
+     	<taskdef classname="com.mahen.ant.MusicCompare" name="mcopy"/>
+        <mcopy baseDir="/music/singles"> 
+          <fileset dir="/music">
+            <include name="artists/**/*.mp3"/>
+          </fileset>
+        </mcopy>
+        
+  </target>
+</project>

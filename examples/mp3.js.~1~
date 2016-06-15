@@ -1,0 +1,3 @@
+var mp3 = new MP3("c:/music/sean paul/dutty rock/get busy.mp3");
+out.println("artist: "+mp3.artist);
+out.println("title: "+mp3.title);
